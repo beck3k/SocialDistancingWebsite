@@ -37,7 +37,7 @@ const Home = () => (
     </React.Fragment>
 
     <ThemeProvider theme={theme} >
-      <Box style={{backgroundColor: "#A3E3A6"}} width={1}>
+      <Box style={{backgroundColor: "#7ae8a6"}} width={1}>
         <Container maxWidth={1} width={1} fixed style={{paddingBottom: "45px"}}>
           <Grid container spacing={1}>
             <Grid container item xs={4} spacing={1}>
@@ -54,7 +54,7 @@ const Home = () => (
       </Box>
       <Box width={1}>
           <Grid container space={1} style={{marginTop: "12px"}}>
-            <Grid container item xs={6} spacing={3} style={{backgroundColor: "#B3E07B", paddingTop: "35px", paddingBottom: "95px"}}>
+            <Grid container item xs={6} spacing={3} style={{backgroundColor: "#9be679", paddingTop: "35px", paddingBottom: "95px"}}>
               <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" width={1}>
                 <Typography variant="h3" color="secondary">
                   Mission Statement
@@ -77,7 +77,7 @@ const Home = () => (
               Make memes! Help spread the word by making your own memes that encourage social distancing. Post your memes on Instagram, Twitter, or Facebook with #sdcv19. All of the memes will be features in our Meme Gallery and the two best memes will receive stickers from us each month. Visit our Instagram page for more info!
             </Box>
           </Grid>
-          <Grid container item xs={6} spacing={3} style={{backgroundColor: "#93BEE6", marginTop: "0px", marginLeft:"12px"}}>
+          <Grid container item xs={6} spacing={3} style={{backgroundColor: "#7ac1e8", marginTop: "0px", marginLeft:"12px"}}>
             <Box display="flex" width={1} justifyContent="center" alignItems="center" flexDirection="column">
               <Typography variant="h3" color="secondary">What You Can do</Typography>
               <img src="/outreach.png"></img>
