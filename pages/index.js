@@ -73,7 +73,7 @@ const Home = () => (
       <Box width={1}>
         <Grid container space={1} style={{marginTop: "12px"}}>
           <Grid container item xs={6} spacing={3} style={{paddingTop: "35px", paddingBottom: "95px"}}>
-            <Box display="flex" justifyContent="center" alignItems="center" fontWeight="fontWeightBold" fontSize={30}>
+            <Box display="flex" justifyContent="center" alignItems="center" fontWeight="fontWeightBold" fontSize={30} style={{marginLeft: "24px"}}>
               Make memes! Help spread the word by making your own memes that encourage social distancing. Post your memes on Instagram, Twitter, or Facebook with #sdcv19. All of the memes will be features in our Meme Gallery and the two best memes will receive stickers from us each month. Visit our Instagram page for more info!
             </Box>
           </Grid>

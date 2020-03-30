@@ -5,9 +5,28 @@ import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import Paper from '@material-ui/core/Paper';
 import { Typography } from '@material-ui/core';
+import { MuiThemeProvider } from '@material-ui/core';
+import { makeStyles, createMuiTheme } from '@material-ui/core/styles';
+
+const theme = createMuiTheme({
+    typography: {
+      fontFamily: "\"Alegreya\", serif",
+      "fontWeightRegular": 900,
+      fontWeight: "fontWeightBold"
+    },
+    palette: {
+        primary: {
+            main: '#7ae8a6',
+        },
+        secondary: {
+            main: '#FFFFFF',
+        }
+    }
+});
 
 const Resources = () => {
     return (
+        <MuiThemeProvider theme={theme}>
         <React.Fragment>
             <Navbar />
             <br /><br />
@@ -72,6 +91,7 @@ const Resources = () => {
                 </Grid>
             </Box>
         </React.Fragment>
+        </MuiThemeProvider>
     );
 };
 
