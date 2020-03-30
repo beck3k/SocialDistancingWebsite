@@ -74,10 +74,11 @@ export default function ButtonAppBar(props) {
           <Typography variant="h4" className={classes.title} color="secondary">
             Social? Distancing
           </Typography>
-          <Button color="secondary" href="/">Memes</Button>
+          <Button color="secondary" href="/">Home</Button>
+          <Button color="secondary" href="/memes">Memes</Button>
           <Button color="secondary" href="/games">Games</Button>
           <Button color="secondary" href="/resources">More Resources</Button>
-          <Button color="secondary">Contact</Button>
+          {/* <Button color="secondary">Contact</Button> */}
         </Toolbar>
       </AppBar>
       </ElevationScroll>
