@@ -18,7 +18,7 @@ const Resources = () => {
                             Mental Health
                         </Typography>
                     </Grid>
-                    <Grid container item xs={4} spacing={3}>
+                    <Grid container item xs={4} spacing={3} style={{marginRight: "12px", marginLeft: "10px"}}>
                         <Typography variant="h3" style={{borderBottom: "solid 5px #7ae8a6"}}>
                             Social Distancing Tips
                         </Typography>
