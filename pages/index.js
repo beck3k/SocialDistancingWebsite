@@ -1,203 +1,102 @@
 import Head from 'next/head'
+import Container from '@material-ui/core/Container';
+import Navbar from '../components/Navbar';
+import { Typography, MuiThemeProvider } from '@material-ui/core';
+import { makeStyles, createMuiTheme } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/styles';
+import Grid from '@material-ui/core/Grid';
+import Box from '@material-ui/core/Box';
+import Button from '@material-ui/core/Button';
+
+const theme = createMuiTheme({
+  typography: {
+    fontFamily: "\"Alegreya\", serif",
+    "fontWeightRegular": 900,
+    fontWeight: "fontWeightBold"
+  },
+  palette: {
+      primary: {
+          main: '#7ae8a6',
+      },
+      secondary: {
+          main: '#FFFFFF',
+      }
+  }
+})
 
 const Home = () => (
+  <MuiThemeProvider theme={theme}>
   <div className="container">
     <Head>
-      <title>Create Next App</title>
+      <title>COVID-19</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
 
-    <main>
-      <h1 className="title">
-        Welcome to <a href="https://nextjs.org">Next.js!</a>
-      </h1>
+    <React.Fragment>
+    <Navbar />
+    </React.Fragment>
 
-      <p className="description">
-        Get started by editing <code>pages/index.js</code>
-      </p>
-
-      <div className="grid">
-        <a href="https://nextjs.org/docs" className="card">
-          <h3>Documentation &rarr;</h3>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a href="https://nextjs.org/learn" className="card">
-          <h3>Learn &rarr;</h3>
-          <p>Learn about Next.js in an interactive course with quizzes!</p>
-        </a>
-
-        <a
-          href="https://github.com/zeit/next.js/tree/master/examples"
-          className="card"
-        >
-          <h3>Examples &rarr;</h3>
-          <p>Discover and deploy boilerplate example Next.js projects.</p>
-        </a>
-
-        <a
-          href="https://zeit.co/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          className="card"
-        >
-          <h3>Deploy &rarr;</h3>
-          <p>
-            Instantly deploy your Next.js site to a public URL with ZEIT Now.
-          </p>
-        </a>
-      </div>
-    </main>
-
-    <footer>
-      <a
-        href="https://zeit.co?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Powered by <img src="/zeit.svg" alt="ZEIT Logo" />
-      </a>
-    </footer>
-
-    <style jsx>{`
-      .container {
-        min-height: 100vh;
-        padding: 0 0.5rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-
-      main {
-        padding: 5rem 0;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-
-      footer {
-        width: 100%;
-        height: 100px;
-        border-top: 1px solid #eaeaea;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      footer img {
-        margin-left: 0.5rem;
-      }
-
-      footer a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-
-      .title a {
-        color: #0070f3;
-        text-decoration: none;
-      }
-
-      .title a:hover,
-      .title a:focus,
-      .title a:active {
-        text-decoration: underline;
-      }
-
-      .title {
-        margin: 0;
-        line-height: 1.15;
-        font-size: 4rem;
-      }
-
-      .title,
-      .description {
-        text-align: center;
-      }
-
-      .description {
-        line-height: 1.5;
-        font-size: 1.5rem;
-      }
-
-      code {
-        background: #fafafa;
-        border-radius: 5px;
-        padding: 0.75rem;
-        font-size: 1.1rem;
-        font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-          DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-      }
-
-      .grid {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-
-        max-width: 800px;
-        margin-top: 3rem;
-      }
-
-      .card {
-        margin: 1rem;
-        flex-basis: 45%;
-        padding: 1.5rem;
-        text-align: left;
-        color: inherit;
-        text-decoration: none;
-        border: 1px solid #eaeaea;
-        border-radius: 10px;
-        transition: color 0.15s ease, border-color 0.15s ease;
-      }
-
-      .card:hover,
-      .card:focus,
-      .card:active {
-        color: #0070f3;
-        border-color: #0070f3;
-      }
-
-      .card h3 {
-        margin: 0 0 1rem 0;
-        font-size: 1.5rem;
-      }
-
-      .card p {
-        margin: 0;
-        font-size: 1.25rem;
-        line-height: 1.5;
-      }
-
-      @media (max-width: 600px) {
-        .grid {
-          width: 100%;
-          flex-direction: column;
-        }
-      }
-    `}</style>
+    <ThemeProvider theme={theme} >
+      <Box style={{backgroundColor: "#A3E3A6"}} width={1}>
+        <Container maxWidth={1} width={1} fixed style={{paddingBottom: "45px"}}>
+          <Grid container spacing={1}>
+            <Grid container item xs={4} spacing={1}>
+              <img src="/icon.png" width="100%"/>
+            </Grid>
+            <Grid container item xs={8} spacing={3} style={{padding: '48px'}}>
+              <Box display="flex" flexDirection="column" justifyContent="center" style={{marginLeft: '52px'}}>
+                <Typography variant="h4" color="secondary">Help stop the spread of Covid-19 by encouraging social distancing</Typography>
+                {/* <Button color="">Get Started</Button> */}
+              </Box>
+            </Grid>
+          </Grid>
+        </Container>
+      </Box>
+      <Box width={1}>
+          <Grid container space={1} style={{marginTop: "12px"}}>
+            <Grid container item xs={6} spacing={3} style={{backgroundColor: "#B3E07B", paddingTop: "35px", paddingBottom: "95px"}}>
+              <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" width={1}>
+                <Typography variant="h3" color="secondary">
+                  Mission Statement
+                </Typography>
+                <img src="/target.png" />
+              </Box>
+            </Grid>
+            <Grid container item xs={6} spacing={3}>
+              <Box display="flex" justifyContent="center" alignItems="center" style={{marginLeft: "35px"}} fontWeight="fontWeightBold" fontSize={30}>                {/* <Typography> */}
+                  Our mission is to promote social distancing through various social media platforsm to all demopgrahics with our main focus being Gen Z. We hope that communicating the importance of social distancing at a time like this wil make our communities healthier.
+                {/* </Typography> */}
+              </Box>
+            </Grid>
+          </Grid>
+      </Box>
+      <Box width={1}>
+        <Grid container space={1} style={{marginTop: "12px"}}>
+          <Grid container item xs={6} spacing={3} style={{paddingTop: "35px", paddingBottom: "95px"}}>
+            <Box display="flex" justifyContent="center" alignItems="center" fontWeight="fontWeightBold" fontSize={30}>
+              Make memes! Help spread the word by making your own memes that encourage social distancing. Post your memes on Instagram, Twitter, or Facebook with #sdcv19. All of the memes will be features in our Meme Gallery and the two best memes will receive stickers from us each month. Visit our Instagram page for more info!
+            </Box>
+          </Grid>
+          <Grid container item xs={6} spacing={3} style={{backgroundColor: "#93BEE6", marginTop: "0px", marginLeft:"12px"}}>
+            <Box display="flex" width={1} justifyContent="center" alignItems="center" flexDirection="column">
+              <Typography variant="h3" color="secondary">What You Can do</Typography>
+              <img src="/outreach.png"></img>
+            </Box>
+          </Grid>
+        </Grid>
+      </Box>
+    </ThemeProvider>
+    
 
     <style jsx global>{`
-      html,
-      body {
-        padding: 0;
+      body,html {
+        width: 100%;
+        height: 100%;
         margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-          Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-      }
-
-      * {
-        box-sizing: border-box;
       }
     `}</style>
   </div>
+  </MuiThemeProvider>
 )
 
 export default Home
